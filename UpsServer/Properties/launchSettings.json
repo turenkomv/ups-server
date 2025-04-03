@@ -1,0 +1,17 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "UpsServer": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "Logging__LogLevel__Default": "Information",
+        "Logging__LogLevel__Microsoft": "Information",
+        "Logging__Console__FormatterName": "simple",
+        "Logging__Console__FormatterOptions__SingleLine": "true",
+        "Logging__Console__FormatterOptions__TimestampFormat": "HH:mm:ss "
+      }
+    }
+  }
+}
