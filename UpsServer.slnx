@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/nutdotnet/">
+    <Project Path="nutdotnet/NUTDotNetServer/NUTDotNetServer.csproj" />
+    <Project Path="nutdotnet/NUTDotNetShared/NUTDotNetShared.csproj" />
+  </Folder>
+  <Project Path="UpsServer/UpsServer.csproj" />
+</Solution>
