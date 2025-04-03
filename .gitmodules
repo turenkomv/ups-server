@@ -1,0 +1,3 @@
+[submodule "nutdotnet"]
+	path = nutdotnet
+	url = git@github.com:turenkomv/nutdotnet.git
