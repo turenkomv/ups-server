@@ -29,8 +29,12 @@ public class HomeAssistantService : IHostedService
             / (states.ChargeLimit - states.DischargeLimit);
         double? batteryCapacity =
             _batteryRealCapacity * (100.0 - (100.0 - states.ChargeLimit) - states.DischargeLimit) / 100.0;
-        double? batteryRuntime = batteryCapacity * (batteryLevel / 100.0) / states.OutputPower * 60 * 60;
-        double? load = _powerLimit / states.OutputPower;
+        double? batteryRuntime = states.OutputPower > 0 && batteryLevel > 0
+            ? batteryCapacity * (batteryLevel / 100.0) / states.OutputPower * 60 * 60
+            : null;
+        double? load = states.OutputPower > 0
+            ? (states.OutputPower / _powerLimit) * 100.0
+            : 0;
         string status = states switch
         {
             { AcPluggedIn: true } when
